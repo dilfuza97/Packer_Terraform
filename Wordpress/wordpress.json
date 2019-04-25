@@ -1,0 +1,24 @@
+{
+    "builders": [{
+      "type": "amazon-ebs",
+      "region": "us-east-1",
+      "source_ami": "ami-0de53d8956e8dcf80",
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "wordpress-{{timestamp}}"
+    }],
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+          "sudo yum update -y",
+          "sudo yum install php php-mysql",
+          "sudo yum install mysql",
+          "sudo yum install wget",
+          "sudo wget https://wordpress.org/latest.zip",
+          "sudo unzip latest.zip",
+          "sudo rsync -avP ~/wordpress/ /var/www/html/",
+          "sudo chowm -R apache:apache /var/www/html/*"
+
+        ]
+    }]
+}
