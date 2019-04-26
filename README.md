@@ -5,7 +5,7 @@ Run (packer)
 
 
 
-RUn (packer validate {filename .json})
+ (packer validate {filename .json})
 
 
 
@@ -13,7 +13,7 @@ RUn (packer validate {filename .json})
 
 
 
-Run (packer build {filename .json})
+ (packer build {filename .json})
 
 
 
@@ -22,4 +22,4 @@ Run (packer build {filename .json})
 
 
 
-Run (packer build -var-file={filename.json {filename.json) {its two files run sametime}
+(packer build -var-file={filename.json {filename.json) {its two files run sametime}
