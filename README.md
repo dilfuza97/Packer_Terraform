@@ -14,4 +14,12 @@ RUn (packer validate {filename .json})
 
 
 Run (packer build {filename .json})
-Run (
+
+
+
+
+
+
+
+
+Run (packer build -var-file
