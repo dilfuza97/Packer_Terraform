@@ -22,4 +22,4 @@ Run (packer)
 
 
 
-(packer build -var-file={filename.json {filename.json) {its two files run sametime}
+(packer build --var-file={filename.json {filename.json) {its two files run sametime}
